@@ -135,7 +135,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="time"
                 name="hourPickup"
@@ -155,7 +155,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="hight"
@@ -185,7 +185,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="identGet"
@@ -195,7 +195,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="phoneGet"
@@ -205,7 +205,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="addresstreetGet"
@@ -215,7 +215,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="addressnumberGet"
@@ -225,7 +225,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="text"
                 name="addressCityGet"
@@ -235,7 +235,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="text"
                 name="status"
@@ -245,7 +245,7 @@ const NewCustomer = () => {
               />
             </Form.Group>
 
-          <button className="btn btn-success">SAVE</button>
+          <button className="btn btn-success">GUARDAR</button>
         </Form>
       </Container>
     </div>

@@ -48,7 +48,7 @@ const ListCustomers = () => {
   const handleChangeModal = ({ target }) => {
     setDataModal({
       ...dataModal,
-      [target.nameSet]: target.value,
+      [target.name]: target.value,
     });
   };
 
@@ -78,10 +78,10 @@ const ListCustomers = () => {
       <Row>
         {!list
           ? "Cargando..."
-          : list.map((users, index) => (
+          : list.map((delivery, index) => (
               <CardUsers
                 key={index}
-                users={users}
+                users={delivery}
                 setUpdateList={setUpdateList}
                 updateList={updateList}
                 handleCloseModal={handleCloseModal}
@@ -178,7 +178,7 @@ const ListCustomers = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="time"
                 name="hourPickup"
@@ -198,7 +198,7 @@ const ListCustomers = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="hight"
@@ -228,7 +228,7 @@ const ListCustomers = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="identGet"
@@ -238,7 +238,7 @@ const ListCustomers = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="phoneGet"
@@ -248,7 +248,7 @@ const ListCustomers = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="addresstreetGet"
@@ -258,7 +258,7 @@ const ListCustomers = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="number"
                 name="addressnumberGet"
@@ -268,7 +268,7 @@ const ListCustomers = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="text"
                 name="addressCityGet"
@@ -278,7 +278,7 @@ const ListCustomers = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <Form.Control
                 type="text"
                 name="status"
@@ -295,10 +295,10 @@ const ListCustomers = () => {
               type="reset"
               onClick={handleCloseModal}
             >
-              Close
+              Cerrar
             </button>
             <button className="btn btn-success" type="submit">
-              Save Changes
+              Guardar cambios
             </button>
           </Modal.Footer>
         </Form>
