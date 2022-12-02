@@ -81,7 +81,7 @@ const ListCustomers = () => {
           : list.map((delivery, index) => (
               <CardUsers
                 key={index}
-                users={delivery}
+                delivery={delivery}
                 setUpdateList={setUpdateList}
                 updateList={updateList}
                 handleCloseModal={handleCloseModal}

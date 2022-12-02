@@ -4,7 +4,7 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import Swal from "sweetalert2";
 import Gravatar from "react-gravatar";
 
-const CardUsers = ({ users, setUpdateList, updateList, handleCloseModal, handleOpenModal, setDataModal }) => {
+const CardUsers = ({ delivery, setUpdateList, updateList, handleCloseModal, handleOpenModal, setDataModal }) => {
 
   const url = "http://localhost:3001/";
 
@@ -12,7 +12,7 @@ const CardUsers = ({ users, setUpdateList, updateList, handleCloseModal, handleO
     console.log ('Eliminando')
 
     Swal.fire({
-        title: `Do you want to delete ${users.name} register ?`,
+        title: `Do you want to delete ${delivery.nameSet} register ?`,
         text: "You can not turn back",
         icon: 'warning',
         showCancelButton: true,
@@ -24,12 +24,12 @@ const CardUsers = ({ users, setUpdateList, updateList, handleCloseModal, handleO
         if (result.isConfirmed) {
             
            
-            axios.delete(`${url}/${users.id}`).then((response) => {
+            axios.delete(`${url}/${delivery.id}`).then((response) => {
              console.log(response)
               if (response.status === 200) {                  
                  Swal.fire(
                         'Deleted!',
-                        `${users.name} register deleted!`,
+                        `${delivery.nameSet} register deleted!`,
                         'success'
                     )
                     setUpdateList(!updateList)
@@ -47,7 +47,7 @@ const CardUsers = ({ users, setUpdateList, updateList, handleCloseModal, handleO
 
 const handleEdit = () => {
     handleOpenModal();
-    setDataModal(users)
+    setDataModal(delivery)
 }
 
  
@@ -55,24 +55,24 @@ const handleEdit = () => {
     <div className="col-4 mb-3">
       <Card>
         <Card.Title className="text-center">
-          <strong>{users.nameSet}</strong>
+          <strong>{delivery.nameSet}</strong>
         </Card.Title>
         <Card.Body>
           <ListGroup className="mb-3">
           
-          <Gravatar emailSet={users.emailSet} size={350} rating="pg" default="monsterid" className="CustomAvatar-image"           /> 
+          <Gravatar emailSet={delivery.emailSet} size={350} rating="pg" default="monsterid" className="CustomAvatar-image"           /> 
             <ListGroupItem>
            
               <strong>Fecha de recogida: </strong>
-              {users.datePickup}
+              {delivery.datePickup}
             </ListGroupItem>
             <ListGroupItem>
               <strong>Peso: </strong>
-              {users.weigh}
+              {delivery.weigh}
             </ListGroupItem>
             <ListGroupItem>
               <strong>Nombre de quien recibe: </strong>
-              {users.nameGet}
+              {delivery.nameGet}
             </ListGroupItem>
           </ListGroup>
           <button className="btn btn-danger me-2" onClick={handleDelete}>ELIMINAR</button>
